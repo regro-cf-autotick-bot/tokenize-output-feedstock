@@ -1,5 +1,5 @@
 {% set name = "tokenize-output" %}
-{% set version = "0.4.4" %}
+{% set version = "0.4.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f074406fe781dfd1fed36ac757ffeda71b3473a8b08abb71b7870a50c4d27d26
+  sha256: b31e75f52ae21099f8e10b6e2dc2cfdedae5a544fdbc3df963273b06bc8cd80d
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -32,7 +32,7 @@ about:
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Get identifiers, names, paths, URLs and words from the command output.'
+  summary: Get identifiers, names, paths, URLs and words from the command output.
   doc_url: https://github.com/tokenizer/tokenize-output/blob/master/README.md
   dev_url: https://github.com/tokenizer/tokenize-output
 
